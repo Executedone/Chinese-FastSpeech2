@@ -1,0 +1,6 @@
+log_dir: "./Log"
+
+gpu_id: "-1"
+
+http_id: 127.0.0.1
+port: 5876

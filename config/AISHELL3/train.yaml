@@ -1,0 +1,21 @@
+path:
+  ckpt_path: "./output/ckpt/biaobei/8000.pth.tar"  # fastspeech ckpt
+  model_path: "" # model save dir, just for training
+  log_path: ""  # train log
+  result_path: ""  # just for train-generation
+optimizer:
+  batch_size: 64
+  betas: [0.9, 0.98]
+  eps: 0.000000001
+  weight_decay: 0.0
+  grad_clip_thresh: 1.0
+  grad_acc_step: 1
+  warm_up_step: 2000
+  anneal_steps: [300000, 400000, 500000]
+  anneal_rate: 0.3
+step:
+  total_step: 50000
+  log_step: 50
+  synth_step: 1000
+  val_step: 1000
+  save_step: 2000
