@@ -5,7 +5,7 @@
 参考samples中生成的音频
 
 ## 模型文件
-本项目主体架构为FastSpeech2+HifiGAN结构，另外在输入阶段引入了中文文本的韵律向量，因此共有三个模型：fastspeech_model、hifigan_model、prosody_model（[网盘链接]()），下载后将模型文件放入指定的目录下：
+本项目主体架构为FastSpeech2+HifiGAN结构，另外在输入阶段引入了中文文本的韵律向量，因此共有三个模型：fastspeech_model、hifigan_model、prosody_model（[网盘链接](https://pan.baidu.com/s/1aizIt1Hg9Xhb1ttCrbzOvQ)，提取码：qgpi），下载后将模型文件放入指定的目录下：
 - 8000.pth.tar  --->  output/ckpt/biaobei/
 - generator_universal.pth.tar  --->  hifigan/
 - best_model.pt  --->  transformer/prosody_model/
@@ -17,7 +17,7 @@
 
 ## 训练
 - 由于本项目参考[FastSpeech2](https://github.com/ming024/FastSpeech2)项目，如果想自定义训练，该项目提供了较为详细的训练方法可供参考；
-- 本项目对原方法作了一些优化，优化部分可参考博客[标题]()
+- 本项目对原方法作了一些优化，优化部分可参考博客: [基于FastSpeech2优化的中文语音合成](https://zhuanlan.zhihu.com/p/585086910)
 
 -----
 本项目是出于个人兴趣在语音合成方面做的一些尝试，欢迎大家批评指正，多多交流！
