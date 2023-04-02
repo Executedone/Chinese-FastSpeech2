@@ -1,5 +1,9 @@
 # Chinese-FastSpeech2
-基于[标贝中文标准女声数据](https://www.data-baker.com/data/index/TNtts)继续训练，同时对原论文的[FastSpeech2](https://github.com/ming024/FastSpeech2)模型做了改进，引入了韵律表征以及韵律预测模块，使中文发音更生动且富有节奏
+基于[标贝中文标准女声数据](https://www.data-baker.com/data/index/TNtts)继续训练，同时对原论文的[FastSpeech2](https://github.com/ming024/FastSpeech2)模型做了改进，引入了韵律表征以及韵律预测模块，使中文发音更生动且富有节奏 
+
+## 20230402 更新
+1、加入韵律模型训练代码， 在BertProsody目录下
+2、加入韵律模型训练的数据预处理代码（针对标贝数据，代码未整理，先放出来），在preprocessor/biaobei.py里
 
 ## 样例
 参考samples中生成的音频
