@@ -69,6 +69,10 @@ class TTSServer(object):
                 if request.method == 'POST':
                     text = request.form.get('text')
                     try:
+                        save_path = request.form.get('save_path')
+                    except:
+                        save_path = './'
+                    try:
                         pitch_control = float(request.form.get('pitch_control'))
                     except:
                         pitch_control = 1.0
@@ -83,6 +87,10 @@ class TTSServer(object):
                 else:
                     text = request.args.get('text')
                     try:
+                        save_path = request.args.get('save_path')
+                    except:
+                        save_path = './'
+                    try:
                         pitch_control = float(request.args.get('pitch_control'))
                     except:
                         pitch_control = 1.0
@@ -96,7 +104,7 @@ class TTSServer(object):
                         duration_control = 1.0
 
                 self.logger.info(f'输入文本：{text}')
-                wav_path = self.tts.text2speech(text, pitch_control, energy_control, duration_control)
+                wav_path = self.tts.text2speech(text, save_path, pitch_control, energy_control, duration_control)
 
                 res['result'] = wav_path
                 res['success'] = True

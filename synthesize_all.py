@@ -355,7 +355,9 @@ class SpeechSynthesis(object):
         configs = (preprocess_config, model_config, train_config)
         return configs, preprocess_config, model_config, train_config
 
-    def text2speech(self, text, pitch_control=1.0, energy_control=1.0, duration_control=1.0):
+    def text2speech(self, text, save_path, pitch_control=1.0, energy_control=1.0, duration_control=1.0):
+        self.result_path = save_path
+
         if len(text) < 1:
             print('no texts!')
             return None
