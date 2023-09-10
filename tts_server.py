@@ -70,6 +70,9 @@ class TTSServer(object):
                     text = request.form.get('text')
                     try:
                         save_path = request.form.get('save_path')
+                        if save_path==None:
+                            raise TypeError("save_path is None.")
+
                     except:
                         save_path = './'
                     try:
@@ -88,6 +91,9 @@ class TTSServer(object):
                     text = request.args.get('text')
                     try:
                         save_path = request.args.get('save_path')
+                        if save_path==None:
+                            raise TypeError("save_path is None.")
+
                     except:
                         save_path = './'
                     try:
